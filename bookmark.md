@@ -2,22 +2,18 @@
 layout: post
 title: Bookmarks
 subtitle: <span class="mega-octicon octicon-gear"></span>&nbsp;&nbsp; outils, livre et librairy &nbsp;&nbsp;<span class="mega-octicon octicon-gear"></span>
-menu: Bookmark
+menu: bookmark
 ---
 ## Javascript
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
-- [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
 - [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
 
 ### AngularJs
-- [Protractor](http://angular.github.io/protractor) - End-to-end test framework for AngularJS applications
 - [angular-media-player](https://github.com/colthreepv/angular-media-player) - Directive for audio and video
 - [Smart table](http://lorenzofox3.github.io/smart-table-website/) - Module to easily display data in a table
 - [ng-table](http://esvit.github.io/ng-table/#/) - Module to easily display data in a table
-- [ngToast](https://github.com/tameraydin/ngToast) - AngularJS toast
-- [ANGM-GENERATOR](http://newaeonweb.com.br/generator-angm/) - AngularJS Yeoman Generator
 
 ### Node.js
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
@@ -39,7 +35,6 @@ menu: Bookmark
 ## Icons
 - [Github-Octicons](https://octicons.github.com/) - GitHub's icons
 - [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) - Scalable vector icons that can instantly be customized
-- [Iconfont](http://www.iconfont.cn/) - Alibaba Icon Library (Chinese)
 - [flag-icon-css](http://lipis.github.io/flag-icon-css/) - Country Flags
 - [weloveiconfonts](http://weloveiconfonts.com/) - Icon fonts
 - [Material Icon](https://design.google.com/icons/#ic_accessibility) - Material icons

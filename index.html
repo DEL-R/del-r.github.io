@@ -1,24 +1,32 @@
 ---
 layout: default
-menu: home
 css: ['index.css', 'sidebar-popular-repo.css']
+menu: home
 ---
 <section class="jumbotron">
     <div class="container">
-        <h1>{{ site.title }}</h1>
+        <h1>{{ site.name }}</h1>
         <div id="jumbotron-meta-info">
-            <span class="meta-info">
+        {% if site.description %}
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-info"></span>
+                {{ site.description }}
+            </span><br /> {% endif %}
+        {% if site.location %}
+            <span class="meta-info hvr-grow">
                 <span class="octicon octicon-location"></span>
                 {{ site.location }}
-            </span>
+            </span> {% endif %}
+        {% if site.company %}
             <span class="meta-info hvr-grow">
                 <span class="octicon octicon-organization"></span>
                 <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
-            </span>
+            </span> {% endif %}
+        {% if site.github_url %}
             <span class="meta-info hvr-grow">
                 <span class="octicon octicon-mark-github"></span>
-                <a href="{{ site.github_url }}" target="_blank">@{{ site.name }}</a>
-            </span>
+                <a href="{{ site.github_url }}" target="_blank">{{ site.github_name }}</a>
+            </span> {% endif %}
         </div>
     </div>
 </section>
