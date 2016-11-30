@@ -2,10 +2,11 @@
 layout: default
 css: ['index.css', 'sidebar-popular-repo.css']
 menu: home
+display_comments: false
 ---
 <section class="jumbotron">
     <div class="container">
-        <h1>{{ site.name }}</h1>
+        <h1> <span class="mega-octicon octicon-gist-secret"></span> {{ site.name }} <span class="mega-octicon octicon-gist-secret"></span></h1>
         <div id="jumbotron-meta-info">
         {% if site.description %}
             <span class="meta-info hvr-grow">
@@ -57,7 +58,9 @@ menu: home
             {% include pagination.html %}
 
             <!-- Comments -->
-            {% include disqus-comments.html %}
+            {% if page.display_comments == true %}
+                {% include disqus-comments.html %}
+            {% endif %}
 
         </div>
 

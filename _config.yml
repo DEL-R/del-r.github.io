@@ -49,8 +49,16 @@ kramdown:
 
 syntax_highlighter: coderay
 
+#Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      display_comments: true
+
 # Disque
-disque: # ex. httpdongchuangithubio.disqus.com
+disque: del-rlab
 
 # Pagination
 paginate: 10
@@ -61,6 +69,7 @@ navs:
   -
     href: /
     label: Accueil
+    octicon: home
 
   -
     href: /open-source

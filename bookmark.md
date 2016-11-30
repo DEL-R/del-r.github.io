@@ -50,4 +50,5 @@ menu: bookmark
 
 ## A classer
 - [markapp](http://markapp.io/) - *__list__ of JS libraries that can be used without writing any JS*
-- [GeoPattern](https://jasonlong.github.io/geo_pattern/) - Generate beautiful tiling SVG patterns from a string
+- [GeoPattern](https://jasonlong.github.io/geo_pattern/) - *Generate beautiful tiling SVG patterns from a string*
+- [.gitignore.io](https://www.gitignore.io/) - *Create useful .gitignore files for your project*

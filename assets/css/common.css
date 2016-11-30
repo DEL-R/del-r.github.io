@@ -100,6 +100,10 @@
     color: #fff;
 }
 
+.jumbotron h1 .mega-octicon{
+    font-size: 64px
+}
+
 .jumbotron a {
     color: #fff;
     text-decoration: none;

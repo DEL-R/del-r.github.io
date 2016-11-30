@@ -9,7 +9,14 @@
                class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item hvr-underline-from-center hvr-grow"
                target="{{ nav.target | default: _self }}"
                title="{{ nav.label }}">
+
                 {{ nav.label }}
+
+                    {{% if nav.octicon %}}
+
+                    <br /><span class="mega-octicon octicon-{{ nav.octicon }}"></span>
+                    
+                    {{% endif %}}
             </a>
             {% endfor %}
         </nav>
