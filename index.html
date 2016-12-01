@@ -49,6 +49,7 @@ display_comments: false
                     </p>
                     <p class="post-list-meta">
                         <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                         - <a href="{{ site.url }}{{ post.url }}#disqus_thread"></a>
                     </p>
                 </li>
                 {% endfor %}
@@ -58,9 +59,8 @@ display_comments: false
             {% include pagination.html %}
 
             <!-- Comments -->
-            {% if page.display_comments == true %}
-                {% include disqus-comments.html %}
-            {% endif %}
+            {% include disqus-comments.html %}
+            
 
         </div>
 
@@ -72,3 +72,4 @@ display_comments: false
 
 </section>
 
+<script id="dsq-count-scr" src="//del-rlab.disqus.com/count.js" async></script>
