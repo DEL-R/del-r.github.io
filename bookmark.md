@@ -39,11 +39,19 @@ menu: bookmark
 - [weloveiconfonts](http://weloveiconfonts.com/) - Icon fonts
 - [Material Icon](https://design.google.com/icons/#ic_accessibility) - Material icons
 
-## Color
+## Couleur
+### Ressources
+- [Colors On the Web](http://www.colorsontheweb.com) ---
+### Outils
 - [Minimalist-Color-Palettes](https://www.behance.net/gallery/32154055/Minimalist-Color-Palettes-2015) - Minimalist Color Palettes
+- [Colllor](http://colllor.com) --- ex. avec [`Couleur page d'accueil`](http://colllor.com/607D8B-fff)
+- [Colordot](https://color.hailpixel.com/) --- ex. avec [`Couleur page d'accueil`](https://color.hailpixel.com/#607D8B,263238,2E2E2E,4183C4,858585)
 
 ## Tool
 - [draw.io](https://www.draw.io/) - UML web app for team
+
+## Outil pour maquette
+- [Wireframe.cc](https://wireframe.cc/) --- pour maquettes rapide
 
 ## Books
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) - GitHub Practical Tips
