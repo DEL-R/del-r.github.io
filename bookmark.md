@@ -40,8 +40,10 @@ menu: bookmark
 - [Material Icon](https://design.google.com/icons/#ic_accessibility) - Material icons
 
 ## Couleur
+
 ### Ressources
 - [Colors On the Web](http://www.colorsontheweb.com) ---
+
 ### Outils
 - [Minimalist-Color-Palettes](https://www.behance.net/gallery/32154055/Minimalist-Color-Palettes-2015) - Minimalist Color Palettes
 - [Colllor](http://colllor.com) --- ex. avec [`Couleur page d'accueil`](http://colllor.com/607D8B-fff)
