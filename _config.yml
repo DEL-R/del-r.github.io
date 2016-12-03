@@ -69,23 +69,27 @@ navs:
   -
     href: /
     label: Accueil
-    octicon: home
+    fa_icon: fa-home
 
   -
     href: /open-source
     label: Open-Source
+    fa_icon: fa-copyright fa-flip-horizontal
 
   -
     href: /blog
     label: Blog
+    fa_icon: fa-file-text-o 
 
   -
     href: /bookmark
     label: Outils
+    fa_icon: fa-cogs
 
   -
     href: /about
     label: Contact
+    fa_icon: fa-id-card-o 
 
 # Sidebar to show popular repo
 side_bar_repo_limit: 5 # Number of repos to show
