@@ -2,7 +2,7 @@
 
 .site-header{
     color: #fff;
-    background: #263238;
+    background: #222C31;
 }
 
 .site-header #site-header-brand {
@@ -22,13 +22,17 @@
 }
 
 .site-header.site-header-nav-scrolled a {
-    color: #2e2e2e;
+    color: #222C31;
 }
 
 .site-header.site-header-nav-scrolled #site-header-brand {
-    color: #2e2e2e !important;
+    color: #222C31 !important;
 }
 
 .site-header.site-header-nav-scrolled a:hover {
-    color: #4183c4;
+    color: #607d8b;
+}
+
+.hvr-underline-from-center {
+	color: #222c31;
 }

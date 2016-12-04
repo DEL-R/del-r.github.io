@@ -1,12 +1,12 @@
 <header class="site-header">
     <div class="container">
         <a id="site-header-brand" href="/" title="{{ site.name }}">
-            <span class="octicon octicon-beaker hvr-grow"></span> {{ site.title }} <span class="octicon octicon-beaker hvr-grow"></span>
+            <span class="octicon octicon-beaker hvr-buzz"></span> {{ site.title }} <span class="octicon octicon-beaker hvr-buzz"></span>
         </a>
         <nav class="site-header-nav" role="navigation">
             {% for nav in site.navs %}
             <a href="{{ nav.href }}"
-               class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item hvr-underline-from-center hvr-grow"
+               class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item hvr-bob"
                target="{{ nav.target | default: _self }}"
                title="{{ nav.label }}">
                
