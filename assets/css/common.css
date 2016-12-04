@@ -27,7 +27,7 @@
 }
 
 .site-header #site-header-brand {
-    color: #2e2e2e;
+    color: #222C31;
     float: left;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .site-header a:hover {
-    color: #4183c4;
+    color: #222C31;
 }
 
 #site-header-brand, #site-header-brand .octicon {
