@@ -6,15 +6,15 @@ display_comments: false
 ---
 <section class="jumbotron">
     <div class="container">
-        <h1> <span class="mega-octicon octicon-gist-secret"></span> {{ site.name }} <span class="mega-octicon octicon-gist-secret"></span></h1>
+        <h1> <span class="mega-octicon octicon-gist-secret hvr-pulse"></span>   {{ site.name }}</h1>
         <div id="jumbotron-meta-info">
         {% if site.description %}
-            <span class="meta-info hvr-grow">
+            <span class="meta-info hvr-shrink">
                 <span class="octicon octicon-info"></span>
                 {{ site.description }}
             </span><br /> {% endif %}
         {% if site.location %}
-            <span class="meta-info hvr-grow">
+            <span class="meta-info hvr-wobble-skew">
                 <span class="octicon octicon-location"></span>
                 {{ site.location }}
             </span> {% endif %}
@@ -24,7 +24,7 @@ display_comments: false
                 <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
             </span> {% endif %}
         {% if site.github_url %}
-            <span class="meta-info hvr-grow">
+            <span class="meta-info hvr-grow-rotate">
                 <span class="octicon octicon-mark-github"></span>
                 <a href="{{ site.github_url }}" target="_blank">{{ site.github_name }}</a>
             </span> {% endif %}

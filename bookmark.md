@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bookmarks
-subtitle: <span class="mega-octicon octicon-gear"></span>&nbsp;&nbsp; outils, livre et librairy &nbsp;&nbsp;<span class="mega-octicon octicon-gear"></span>
+title: Boite à outils
+subtitle: <span class="mega-octicon octicon-gear"></span>&nbsp;&nbsp; outils, livre et library &nbsp;&nbsp;<span class="mega-octicon octicon-gear"></span>
 menu: bookmark
 ---
 ## Javascript
