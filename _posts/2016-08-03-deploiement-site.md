@@ -3,8 +3,6 @@ layout: post
 title: Déploiement du site
 date: 2015-08-03 12:32:18
 categories: r+del
-summary: Checklist déploiement site
-thumbnail: wrench
 tags: 
 - site
 - jekyll
