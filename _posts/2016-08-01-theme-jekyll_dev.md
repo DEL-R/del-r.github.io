@@ -1,5 +1,5 @@
 ---
-layout:     page
+layout:     post
 title:      Theme jekyll pour Dev
 date:       2016-11-25 12:32:18
 categories: 

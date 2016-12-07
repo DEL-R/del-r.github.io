@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Déploiement du site
-date: 2015-08-03 12:32:18
+date: 2016-08-03 12:32:18
 categories: r+del
 tags: 
 - site

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll and Windows 7
-date: 2015-08-05 16:25:35 +0200
+date: 2016-08-05 16:25:35 +0200
 categories : r+del
 tags:
 - jekyll
