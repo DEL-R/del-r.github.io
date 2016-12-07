@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Jekyll and Windows 7
-date: 2015-08-05
-category : r+del
-summary: Installation Jekyll sur Windows 7
-thumbnail: windows
+date: 2015-08-05 16:25:35 +0200
+categories : r+del
 tags:
 - jekyll
 - windows
