@@ -12,7 +12,7 @@ tags:
 
  * Création du repo **del-r.github.io** sur mon espace [Github](http://github.com/del-r/del-r.github.io)
  * Création d'un dossier pour recevoir le code à travailler en local ``website\del-r.github.io`` 
- * Cloner [Carte Noire](https://github.com/jacobtomlinson/carte-noire) directement dans mon dossier local ``website\del-r.github.io\``
+ * Cloner [Yummy](https://github.com/DONGChuan/Yummy-Jekyll/) directement dans mon dossier local ``website\del-r.github.io\``
  * Corrections (à détailler) : supprimer billet et page d'exemple
  * Création de mes trois premiers billet : ``Roadmap``, ``liste-sujet`` et ``deploiement-site``
      - Prévoir un moyen de ne pas afficher ces 3 billets

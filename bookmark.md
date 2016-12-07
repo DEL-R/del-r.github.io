@@ -38,6 +38,7 @@ menu: bookmark
 - [flag-icon-css](http://lipis.github.io/flag-icon-css/) - Country Flags
 - [weloveiconfonts](http://weloveiconfonts.com/) - Icon fonts
 - [Material Icon](https://design.google.com/icons/#ic_accessibility) - Material icons
+- [Instant Logo Search](http://instantlogosearch.com/)
 
 ## Couleur
 

@@ -2,7 +2,6 @@
 layout:     page
 title:      Jekyll
 date:       2015-08-12 12:32:18
-summary:    
 categories: 
 thumbnail: Jekyll
 tags:

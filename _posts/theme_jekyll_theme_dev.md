@@ -2,9 +2,7 @@
 layout:     page
 title:      Theme jekyll pour Dev
 date:       2016-11-25 12:32:18
-summary:    
 categories: 
-thumbnail: Jekyll
 tags:
  - Jekyll
  - Theme
