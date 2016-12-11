@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Jekyll and Windows 7
+title: Jekyll et Windows 7
 date: 2016-08-05 16:25:35 +0200
-categories : r+del
+categories : Webdev
 tags:
 - jekyll
 - windows
-- site
+- site web
 ---
 
 # Jekyll avec Windows 7 
