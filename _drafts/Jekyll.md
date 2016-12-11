@@ -1,5 +1,5 @@
 ---
-layout:     page
+layout:     post
 title:      Jekyll
 date:       2015-08-12 12:32:18
 categories: 

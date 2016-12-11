@@ -4,16 +4,25 @@ title: Boite à outils
 subtitle: <span class="mega-octicon octicon-gear"></span>&nbsp;&nbsp; outils, livre et library &nbsp;&nbsp;<span class="mega-octicon octicon-gear"></span>
 menu: bookmark
 ---
+## Apprendre à coder
+ - [Free Code Camp](http://www.freecodecamp.com)
+ - [Codecademy](https://www.codecademy.com/learn) *Partiellement en francais*
+ - [Open Class Rooms](https://openclassrooms.com/) *Site francophone*
+
 ## Javascript
+- [jQuery](https://jquery.com/) - [`Doc officielle`](https://learn.jquery.com/) / [Cheatsheet](http://oscarotero.com/jquery/)
+    + [mmenu](http://mmenu.frebsite.nl/) : The best jQuery plugin for app look-alike on- and off-canvas menus with sliding submenus for your website and webapp. It is very customizable through a wide range of options, extensions and add-ons and it will always fit your needs.
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
 - [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
+- [markapp](http://markapp.io/) - *__list__ of JS libraries that can be used without writing any JS*
 
 ### AngularJs
 - [angular-media-player](https://github.com/colthreepv/angular-media-player) - Directive for audio and video
 - [Smart table](http://lorenzofox3.github.io/smart-table-website/) - Module to easily display data in a table
 - [ng-table](http://esvit.github.io/ng-table/#/) - Module to easily display data in a table
+- [Angular-Material](https://material.angularjs.org/latest/) - Implementation of Google's Material Design Specification
 
 ### Node.js
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
@@ -25,12 +34,14 @@ menu: bookmark
 - [Animate.css](https://github.com/daneden/animate.css) - Bunch of cool, fun, and cross-browser animation. 
 
 ## Front-end web UI/Framework
-- [Bootstrap](http://getbootstrap.com/) - HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
-- [Foundation](http://foundation.zurb.com/frameworks-docs.html) - 
-- [Angular-Material](https://material.angularjs.org/latest/) - Implementation of Google's Material Design Specification
+- [Html5Boilerplate](https://html5boilerplate.com/)/[Initializr](www.initializr.com) : HTML5 Boilerplate est un template HTML5. Boilerplate est constitué d’un ensemble de fichiers HTML, CSS et Javascript, qui servent à bien démarrer un projet HTML5. Il inclut également des outils très utiles tels que [Modernizr](http://modernizr.com/), [jQuery](https://jquery.com/), et un reset de CSS.
+### [Bootstrap](http://getbootstrap.com/) 
+HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
+### [Foundation](http://foundation.zurb.com/frameworks-docs.html) 
+- [`CDN`](https://www.foundationcdn.com/)
 
 ## Fonts
-- [Google Fonts](https://www.google.com/fonts) - So it's google fonts :D
+- [Google Fonts](https://www.google.com/fonts)
 
 ## Icons
 - [Github-Octicons](https://octicons.github.com/) - GitHub's icons
@@ -50,18 +61,21 @@ menu: bookmark
 - [Colllor](http://colllor.com) --- ex. avec [`Couleur page d'accueil`](http://colllor.com/607D8B-fff)
 - [Colordot](https://color.hailpixel.com/) --- ex. avec [`Couleur page d'accueil`](https://color.hailpixel.com/#607D8B,263238,2E2E2E,4183C4,858585)
 
-## Tool
-- [draw.io](https://www.draw.io/) - UML web app for team
-
 ## Outil pour maquette
 - [Wireframe.cc](https://wireframe.cc/) --- pour maquettes rapide
 
-## Books
+## Hébergements gratuit ou presque
+ - [Firebase](https://www.firebase.com/pricing.html)
+ - [Parse](https://parse.com/plans)
+ - [Heroku](https://www.heroku.com/)
+
+## Livres
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) - GitHub Practical Tips
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
 
 ## A classer
-- [markapp](http://markapp.io/) - *__list__ of JS libraries that can be used without writing any JS*
 - [GeoPattern](https://jasonlong.github.io/geo_pattern/) - *Generate beautiful tiling SVG patterns from a string*
 - [.gitignore.io](https://www.gitignore.io/) - *Create useful .gitignore files for your project*
 - [HTML5up!](https://html5up.net/) - *superbe theme de qualité a customiser*
 - [Unsplash Source](https://source.unsplash.com/) --- *A simple API for embedding Unsplash photos.*
+- [draw.io](https://www.draw.io/) - UML web app for team
