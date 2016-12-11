@@ -17,6 +17,7 @@ menu: bookmark
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
 - [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
 - [markapp](http://markapp.io/) - *__list__ of JS libraries that can be used without writing any JS*
+- [Isotope.js](http://isotope.metafizzy.co/) - *Filter & sort magical layouts*
 
 ### AngularJs
 - [angular-media-player](https://github.com/colthreepv/angular-media-player) - Directive for audio and video
