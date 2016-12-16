@@ -28,7 +28,6 @@ url: https://del-r.github.io
 gems:
   - jekyll-paginate
   - jekyll-geo-pattern
-  - rouge
   - kramdown
   - jekyll-github-metadata
 

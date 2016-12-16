@@ -42,9 +42,11 @@ css: '../../bower_components/flag-icon-css/css/flag-icon.min.css'
 
 ### [Bootstrap](http://getbootstrap.com/) 
 HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+- [CDN](https://www.bootstrapcdn.com/){:class="btn btn-default hvr-grow-shadow"} --- *CDN for Bootstrap, Font Awesome and Bootswatch*
 
 ### [Foundation](http://foundation.zurb.com/frameworks-docs.html) 
 - [CDN](https://www.foundationcdn.com/){:class="btn btn-default hvr-grow-shadow"}
+- [Pizza Amore!](http://zurb.com/playground/pizza-amore-charts-and-graphs) - *Deliver up pie charts, bar charts and line graphs for your responsive site.*
 
 ## Fonts
 - [Google Fonts](https://www.google.com/fonts)
