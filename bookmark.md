@@ -9,6 +9,7 @@ css: '../../bower_components/flag-icon-css/css/flag-icon.min.css'
  - [Free Code Camp](http://www.freecodecamp.com)
  - [Codecademy](https://www.codecademy.com/learn) *Partiellement en francais*
  - [Open Class Rooms](https://openclassrooms.com/) <span class="flag-icon flag-icon-fr"></span>
+ - [Viking Code School](https://www.vikingcodeschool.com/prep)
 
 
 ## Javascript
@@ -55,6 +56,7 @@ HTML, CSS, and JS framework for developing responsive, mobile first projects on 
 - [Github-Octicons](https://octicons.github.com/) - GitHub\'s icons
 - [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) - Scalable vector icons that can instantly be customized
 - [flag-icon-css](http://lipis.github.io/flag-icon-css/) - Country Flags
+- [The Noun Project](https://thenounproject.com)
 - [weloveiconfonts](http://weloveiconfonts.com/) - Icon fonts
 - [Material Icon](https://design.google.com/icons/#ic_accessibility) - Material icons
 - [Instant Logo Search](http://instantlogosearch.com/)
