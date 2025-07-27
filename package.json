@@ -1,0 +1,38 @@
+{
+  "name": "le-lab-rd",
+  "version": "2.0.0",
+  "description": "Site personnel de Rudy Delansay - Le Lab' RD - Modernisé avec Jekyll 4.x",
+  "keywords": ["jekyll", "blog", "portfolio", "front-end", "ruby"],
+  "author": "Rudy Delansay <delansay.rudy@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/del-r/del-r.github.io.git"
+  },
+  "scripts": {
+    "postinstall": "bundle config set --local path 'vendor/bundle' && bundle install",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "serve-dev": "bundle exec jekyll serve --livereload --drafts",
+    "clean": "bundle exec jekyll clean",
+    "doctor": "bundle exec jekyll doctor",
+    "version": "bundle exec jekyll --version"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0",
+    "ruby": ">=3.3.0"
+  }
+}
