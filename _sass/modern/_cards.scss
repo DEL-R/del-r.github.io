@@ -1,0 +1,210 @@
+// Modern Card System
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    border-color: var(--border-secondary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--border-primary);
+    background: var(--bg-secondary);
+    
+    .card-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin: 0;
+      color: var(--text-primary);
+    }
+    
+    .card-subtitle {
+      font-size: var(--font-size-sm);
+      color: var(--text-tertiary);
+      margin: var(--space-1) 0 0 0;
+    }
+  }
+  
+  .card-body {
+    padding: var(--space-6);
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .card-footer {
+    padding: var(--space-6);
+    border-top: 1px solid var(--border-primary);
+    background: var(--bg-secondary);
+    
+    &.card-footer-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-primary);
+  }
+}
+
+// Project card
+.project-card {
+  @extend .card;
+  
+  .project-header {
+    padding: var(--space-6);
+    
+    .project-title {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-2);
+      
+      h3 {
+        margin: 0;
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
+      }
+      
+      .project-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--color-primary);
+      }
+    }
+    
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      
+      .tech-tag {
+        display: inline-block;
+        padding: var(--space-1) var(--space-3);
+        background: var(--bg-tertiary);
+        color: var(--text-tertiary);
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-medium);
+        border-radius: var(--radius-full);
+      }
+    }
+  }
+  
+  .project-stats {
+    padding: var(--space-4) var(--space-6);
+    border-top: 1px solid var(--border-primary);
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+  }
+}
+
+// Blog card
+.blog-card {
+  @extend .card;
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+    @include respond-to('md') {
+      height: 250px;
+    }
+  }
+  
+  .blog-content {
+    padding: var(--space-6);
+    
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+      font-size: var(--font-size-sm);
+      color: var(--text-tertiary);
+      
+      .blog-date {
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+      }
+      
+      .blog-reading-time {
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+      }
+    }
+    
+    .blog-title {
+      margin: 0 0 var(--space-3) 0;
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-semibold);
+      
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+        
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+    
+    .blog-excerpt {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      
+      .tag {
+        display: inline-block;
+        padding: var(--space-1) var(--space-3);
+        background: var(--color-primary);
+        color: white;
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-medium);
+        border-radius: var(--radius-full);
+        text-decoration: none;
+        
+        &:hover {
+          background: var(--color-primary-dark);
+          color: white;
+        }
+      }
+    }
+  }
+}

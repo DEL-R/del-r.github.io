@@ -1,0 +1,32 @@
+---
+# Main CSS file for modern design
+---
+
+// Modern CSS Variables & Design Tokens
+@import 'modern/variables';
+@import 'modern/typography';
+
+// Reset & Base
+@import 'modern/reset';
+@import 'modern/base';
+
+// Layout Components
+@import 'modern/layout';
+@import 'modern/grid';
+
+// UI Components
+@import 'modern/buttons';
+@import 'modern/cards';
+@import 'modern/navigation';
+@import 'modern/hero';
+@import 'modern/blog';
+
+// Utilities
+@import 'modern/utilities';
+@import 'modern/animations';
+
+// Dark mode
+@import 'modern/dark-mode';
+
+// Syntax highlighting (modern)
+@import 'modern/syntax-modern';

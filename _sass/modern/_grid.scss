@@ -1,0 +1,113 @@
+// Modern Grid System
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  gap: var(--space-6);
+  
+  // 1 column by default (mobile)
+  grid-template-columns: 1fr;
+  
+  // 2 columns on tablet
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  // 3 columns on desktop
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  // 4 columns on large screens
+  @include respond-to('xl') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Auto-fit grid (items adjust to container width)
+.grid-auto-fit {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+// Specific column counts
+.grid-1 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
+
+// Responsive grid utilities
+@include respond-to('sm') {
+  .sm\:grid-1 { grid-template-columns: 1fr; }
+  .sm\:grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .sm\:grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@include respond-to('md') {
+  .md\:grid-1 { grid-template-columns: 1fr; }
+  .md\:grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .md\:grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@include respond-to('lg') {
+  .lg\:grid-1 { grid-template-columns: 1fr; }
+  .lg\:grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .lg\:grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .lg\:grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .lg\:grid-5 { grid-template-columns: repeat(5, 1fr); }
+  .lg\:grid-6 { grid-template-columns: repeat(6, 1fr); }
+}
+
+// Grid item spanning
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-full { grid-column: 1 / -1; }
+
+.row-span-1 { grid-row: span 1; }
+.row-span-2 { grid-row: span 2; }
+.row-span-3 { grid-row: span 3; }
+.row-span-4 { grid-row: span 4; }
+.row-span-full { grid-row: 1 / -1; }
+
+// Gap utilities
+.gap-0 { gap: 0; }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+.gap-10 { gap: var(--space-10); }
+.gap-12 { gap: var(--space-12); }
+
+// Row and column gaps
+.gap-x-0 { column-gap: 0; }
+.gap-x-1 { column-gap: var(--space-1); }
+.gap-x-2 { column-gap: var(--space-2); }
+.gap-x-3 { column-gap: var(--space-3); }
+.gap-x-4 { column-gap: var(--space-4); }
+.gap-x-6 { column-gap: var(--space-6); }
+.gap-x-8 { column-gap: var(--space-8); }
+
+.gap-y-0 { row-gap: 0; }
+.gap-y-1 { row-gap: var(--space-1); }
+.gap-y-2 { row-gap: var(--space-2); }
+.gap-y-3 { row-gap: var(--space-3); }
+.gap-y-4 { row-gap: var(--space-4); }
+.gap-y-6 { row-gap: var(--space-6); }
+.gap-y-8 { row-gap: var(--space-8); }

@@ -1,0 +1,123 @@
+// Modern Hero Component
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  overflow: hidden;
+  
+  // Animated background pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(120, 200, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 var(--space-4);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-6);
+    color: var(--text-primary);
+    
+    @include respond-to('md') {
+      font-size: var(--font-size-5xl);
+    }
+    
+    .highlight {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: var(--line-height-relaxed);
+    
+    @include respond-to('md') {
+      font-size: var(--font-size-2xl);
+    }
+  }
+  
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: center;
+    
+    @include respond-to('sm') {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+// Typing animation for hero
+.hero-typing {
+  position: relative;
+  
+  &::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--color-primary);
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+// Floating elements animation
+.hero-float {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 1;
+  
+  &.float-1 {
+    top: 10%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  &.float-2 {
+    top: 20%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite reverse;
+  }
+  
+  &.float-3 {
+    bottom: 20%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}

@@ -1,0 +1,281 @@
+---
+layout: modern
+title: Accueil
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">
+            Salut, je suis <span class="highlight">{{ site.name }}</span> 👋
+        </h1>
+        <p class="hero-subtitle">
+            Développeur passionné par l'<strong>Open-Source</strong> et les technologies modernes. 
+            Je code, je partage, j'apprends et je contribue à la communauté.
+        </p>
+        <div class="hero-actions">
+            <a href="/blog" class="btn btn-primary btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                Lire le blog
+            </a>
+            <a href="/open-source" class="btn btn-outline btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                Mes projets
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+    <div class="container">
+        <div class="two-column">
+            <div class="animate-on-scroll">
+                <h2>À propos de moi</h2>
+                <p class="lead">
+                    Développeur passionné basé à <strong>{{ site.location }}</strong>, je me spécialise dans les technologies web modernes et l'écosystème Open-Source.
+                </p>
+                <p>
+                    Mon parcours m'a mené à explorer diverses technologies, des frameworks front-end aux architectures backend, en passant par les outils de DevOps. J'aime partager mes découvertes et apprendre de la communauté.
+                </p>
+                <div class="tech-stack">
+                    <h3>Technologies que j'utilise</h3>
+                    <div class="tech-grid">
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">Ruby</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Jekyll</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Git</span>
+                        <span class="tech-item">Docker</span>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-on-scroll">
+                <div class="stats-card">
+                    <h3>Quelques chiffres</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">{{ site.posts | size }}</div>
+                            <div class="stat-label">Articles publiés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">{{ site.github_repos | default: "10+" }}</div>
+                            <div class="stat-label">Projets GitHub</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">♾️</div>
+                            <div class="stat-label">Cafés bus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Posts Section -->
+<section class="section bg-secondary">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Derniers articles</h2>
+            <p class="section-subtitle">
+                Découvrez mes dernières réflexions sur le développement, les technologies et l'Open-Source.
+            </p>
+        </div>
+        
+        <div class="blog-grid card-grid stagger-children">
+            {% for post in site.posts limit:6 %}
+            <article class="blog-card animate-on-scroll hover-lift">
+                {% if post.image %}
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-image">
+                {% endif %}
+                
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            {{ post.date | date: "%d %B %Y" }}
+                        </span>
+                        <span class="blog-reading-time">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                            {{ post.content | reading_time }} min
+                        </span>
+                    </div>
+                    
+                    <h3 class="blog-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    
+                    <p class="blog-excerpt">
+                        {{ post.excerpt | strip_html | truncate: 150 }}
+                    </p>
+                    
+                    {% if post.tags %}
+                    <div class="blog-tags">
+                        {% for tag in post.tags limit:3 %}
+                        <a href="/tags/{{ tag | slugify }}" class="tag">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="/blog" class="btn btn-primary">
+                Voir tous les articles
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12,5 19,12 12,19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section">
+    <div class="container">
+        <div class="contact-section text-center">
+            <h2>Restons en contact</h2>
+            <p class="lead">
+                Une question ? Un projet ? Une simple envie de discuter ? 
+                N'hésitez pas à me contacter !
+            </p>
+            <div class="contact-actions">
+                <a href="mailto:{{ site.email }}" class="btn btn-primary btn-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Me contacter
+                </a>
+                {% if site.github_name %}
+                <a href="https://github.com/{{ site.github_name }}" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.section-header {
+    margin-bottom: var(--space-12);
+    
+    h2 {
+        margin-bottom: var(--space-4);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-xl);
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.tech-stack {
+    margin-top: var(--space-8);
+    
+    h3 {
+        margin-bottom: var(--space-4);
+        font-size: var(--font-size-lg);
+    }
+    
+    .tech-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        
+        .tech-item {
+            padding: var(--space-2) var(--space-4);
+            background: var(--color-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+        }
+    }
+}
+
+.stats-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    border: 1px solid var(--border-primary);
+    
+    h3 {
+        text-align: center;
+        margin-bottom: var(--space-6);
+    }
+    
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+        
+        .stat-item {
+            text-align: center;
+            
+            .stat-number {
+                font-size: var(--font-size-3xl);
+                font-weight: var(--font-weight-bold);
+                color: var(--color-primary);
+                margin-bottom: var(--space-2);
+            }
+            
+            .stat-label {
+                font-size: var(--font-size-sm);
+                color: var(--text-tertiary);
+            }
+        }
+    }
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    .contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        align-items: center;
+        margin-top: var(--space-8);
+        
+        @include respond-to('sm') {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+.blog-grid {
+    margin: var(--space-12) 0;
+}
+</style>

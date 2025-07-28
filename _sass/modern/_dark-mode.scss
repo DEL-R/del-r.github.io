@@ -1,0 +1,165 @@
+// Modern Dark Mode System
+
+// Dark mode toggle functionality
+[data-theme='dark'] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  
+  --text-primary: #f0f6fc;
+  --text-secondary: #c9d1d9;
+  --text-tertiary: #8b949e;
+  
+  --border-primary: #30363d;
+  --border-secondary: #21262d;
+  
+  // Adjust colors for dark mode
+  --color-primary: #58a6ff;
+  --color-primary-dark: #4493f8;
+  --color-primary-light: #79c0ff;
+  
+  --color-secondary: #56d364;
+  --color-secondary-dark: #46c653;
+  --color-secondary-light: #7dd87f;
+  
+  --color-accent: #ffa657;
+  --color-accent-dark: #ff9142;
+  --color-accent-light: #ffb76c;
+  
+  // Adjust shadows for dark mode
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+// Theme toggle button
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    background: var(--bg-tertiary);
+    color: var(--color-primary);
+    transform: scale(1.05);
+  }
+  
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: all var(--transition-base);
+  }
+  
+  .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  
+  .moon-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+  }
+  
+  // Dark mode state
+  [data-theme='dark'] & {
+    .sun-icon {
+      opacity: 0;
+      transform: rotate(-180deg) scale(0.5);
+    }
+    
+    .moon-icon {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+}
+
+// Smooth transitions for theme switching
+* {
+  transition: 
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+// Dark mode specific adjustments
+[data-theme='dark'] {
+  // Code blocks
+  pre,
+  code {
+    background-color: #1c2128;
+    border-color: #373e47;
+  }
+  
+  // Images - reduce brightness slightly in dark mode
+  img:not(.no-dark-filter) {
+    filter: brightness(0.9);
+    transition: filter var(--transition-base);
+    
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+  
+  // Scrollbar styling for dark mode
+  body::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--color-gray-600);
+    
+    &:hover {
+      background: var(--color-gray-500);
+    }
+  }
+}
+
+// Auto dark mode based on system preference
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    
+    --text-primary: #f0f6fc;
+    --text-secondary: #c9d1d9;
+    --text-tertiary: #8b949e;
+    
+    --border-primary: #30363d;
+    --border-secondary: #21262d;
+    
+    --color-primary: #58a6ff;
+    --color-secondary: #56d364;
+  }
+}
+
+// Utility classes for theme-specific styling
+.light-only {
+  [data-theme='dark'] & {
+    display: none;
+  }
+}
+
+.dark-only {
+  display: none;
+  
+  [data-theme='dark'] & {
+    display: block;
+  }
+}

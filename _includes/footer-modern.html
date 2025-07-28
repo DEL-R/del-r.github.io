@@ -1,0 +1,231 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="grid grid-responsive gap-8">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3 class="footer-title">{{ site.title }}</h3>
+                    <p class="footer-description">
+                        {{ site.description }}
+                    </p>
+                    <div class="social-links">
+                        {% if site.github_name %}
+                        <a href="https://github.com/{{ site.github_name }}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="GitHub"
+                           class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        
+                        {% if site.twitter_username %}
+                        <a href="https://twitter.com/{{ site.twitter_username }}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Twitter"
+                           class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        
+                        {% if site.linkedin_username %}
+                        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn"
+                           class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        
+                        <a href="{{ "/feed.xml" | relative_url }}" 
+                           aria-label="RSS Feed"
+                           class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                <circle cx="5" cy="19" r="1"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        {% for nav in site.navs %}
+                        <li>
+                            <a href="{{ nav.href }}" 
+                               {% if nav.target %}target="{{ nav.target }}"{% endif %}
+                               class="footer-link">
+                                {{ nav.label }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <!-- Recent Posts -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Articles récents</h4>
+                    <ul class="footer-links">
+                        {% for post in site.posts limit:3 %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}" class="footer-link">
+                                {{ post.title }}
+                            </a>
+                            <small class="footer-date">{{ post.date | date: "%B %Y" }}</small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>
+                    &copy; {{ 'now' | date: "%Y" }} {{ site.name | default: site.title }}. 
+                    Construit avec ❤️ et <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+                </p>
+                <p class="footer-tech">
+                    <span class="tech-item">Jekyll {{ jekyll.version }}</span>
+                    <span class="tech-item">Ruby {{ site.ruby_version | default: "3.3.7" }}</span>
+                    <span class="tech-item">Hébergé sur <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer-section {
+    .footer-title {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-semibold);
+        margin: 0 0 var(--space-4) 0;
+        color: var(--text-primary);
+    }
+    
+    .footer-description {
+        color: var(--text-secondary);
+        margin-bottom: var(--space-6);
+        line-height: var(--line-height-relaxed);
+    }
+    
+    .social-links {
+        display: flex;
+        gap: var(--space-3);
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-full);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            
+            svg {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+            
+            &:hover {
+                background: var(--color-primary);
+                color: white;
+                transform: translateY(-2px);
+            }
+        }
+    }
+    
+    .footer-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            margin-bottom: var(--space-3);
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+        
+        .footer-date {
+            display: block;
+            color: var(--text-tertiary);
+            font-size: var(--font-size-xs);
+            margin-top: var(--space-1);
+        }
+    }
+}
+
+.footer-bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-align: center;
+    
+    @include respond-to('md') {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    
+    p {
+        margin: 0;
+        font-size: var(--font-size-sm);
+        color: var(--text-tertiary);
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .footer-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        justify-content: center;
+        
+        @include respond-to('md') {
+            justify-content: flex-end;
+        }
+        
+        .tech-item {
+            font-size: var(--font-size-xs);
+            color: var(--text-tertiary);
+        }
+    }
+}
+</style>

@@ -1,0 +1,309 @@
+// Modern Navigation System
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  // Glassmorphism effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4rem;
+    
+    @include respond-to('lg') {
+      padding: 0 var(--space-6);
+    }
+  }
+}
+
+// Logo/Brand
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  transition: color var(--transition-fast);
+  
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  
+  .logo-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+// Desktop Navigation
+.nav-desktop {
+  display: none;
+  
+  @include respond-to('md') {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    position: relative;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-base);
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--bg-secondary);
+      text-decoration: none;
+    }
+    
+    &.active {
+      color: var(--color-primary);
+      background-color: var(--bg-secondary);
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 4px;
+        background: var(--color-primary);
+        border-radius: var(--radius-full);
+      }
+    }
+  }
+}
+
+// Mobile Navigation Toggle
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-radius: var(--radius-base);
+  transition: all var(--transition-fast);
+  
+  @include respond-to('md') {
+    display: none;
+  }
+  
+  &:hover {
+    background-color: var(--bg-secondary);
+  }
+  
+  .hamburger {
+    position: relative;
+    width: 1.25rem;
+    height: 1rem;
+    
+    span {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      border-radius: 1px;
+      transition: all var(--transition-base);
+      
+      &:nth-child(1) {
+        top: 0;
+      }
+      
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+  }
+  
+  // Animation when menu is open
+  &.open .hamburger span {
+    &:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    
+    &:nth-child(3) {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+  }
+}
+
+// Mobile Navigation Menu
+.nav-mobile {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: var(--z-dropdown);
+  
+  &.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @include respond-to('md') {
+    display: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .nav-link {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--bg-secondary);
+      text-decoration: none;
+    }
+    
+    &.active {
+      color: var(--color-primary);
+      background-color: var(--bg-secondary);
+    }
+  }
+}
+
+// Dark mode toggle
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-base);
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    color: var(--color-primary);
+    background-color: var(--bg-secondary);
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform var(--transition-fast);
+  }
+  
+  &:hover .icon {
+    transform: rotate(180deg);
+  }
+}
+
+// Navigation utilities
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+// Skip to main content for accessibility
+.skip-to-main {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-tooltip);
+  transition: top var(--transition-fast);
+  
+  &:focus {
+    top: var(--space-4);
+  }
+}
+
+// Add padding to body to account for fixed header
+body {
+  padding-top: 4rem;
+}
